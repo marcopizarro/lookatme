@@ -19,10 +19,10 @@ size = 640
 count = 0
 blank_image = np.zeros((size, size, 3), np.uint8)
 
-Matrix = [[0 for x in range(10)] for y in range(10)]
+Matrix = [[0 for x in range(15)] for y in range(15)]
 
-for i in range(10):
-    for j in range(10):
+for i in range(15):
+    for j in range(15):
         Matrix[i][j] = random.randint(0, 3)
 print(Matrix)
 
@@ -128,17 +128,17 @@ while(True):
         cv2.imshow('concat', concat3)
     elif state == 1:
         row0 = cv2.hconcat([choices[Matrix[0][1]], choices[Matrix[0][2]], choices[Matrix[0][3]], choices[Matrix[0][4]],
-                            choices[Matrix[0][5]], choices[Matrix[0][6]], choices[Matrix[0][7]], choices[Matrix[0][8]], choices[Matrix[0][9]]])
+                            choices[Matrix[0][5]], choices[Matrix[0][6]], choices[Matrix[0][7]], choices[Matrix[0][8]], choices[Matrix[0][9]], choices[Matrix[0][10]], choices[Matrix[0][11]]])
         row1 = cv2.hconcat([choices[Matrix[1][1]], choices[Matrix[1][2]], choices[Matrix[1][3]], choices[Matrix[1][4]],
-                            choices[Matrix[1][5]], choices[Matrix[1][6]], choices[Matrix[1][7]], choices[Matrix[1][8]], choices[Matrix[1][9]]])
+                            choices[Matrix[1][5]], choices[Matrix[1][6]], choices[Matrix[1][7]], choices[Matrix[1][8]], choices[Matrix[1][9]], choices[Matrix[1][10]], choices[Matrix[1][11]]])
         row2 = cv2.hconcat([choices[Matrix[2][1]], choices[Matrix[2][2]], choices[Matrix[2][3]], choices[Matrix[2][4]],
-                            choices[Matrix[2][5]], choices[Matrix[2][6]], choices[Matrix[2][7]], choices[Matrix[2][8]], choices[Matrix[2][9]]])
+                            choices[Matrix[2][5]], choices[Matrix[2][6]], choices[Matrix[2][7]], choices[Matrix[2][8]], choices[Matrix[2][9]], choices[Matrix[2][10]], choices[Matrix[2][11]]])
         row3 = cv2.hconcat([choices[Matrix[3][1]], choices[Matrix[3][2]], choices[Matrix[3][3]], choices[Matrix[3][4]],
-                            choices[Matrix[3][5]], choices[Matrix[3][6]], choices[Matrix[3][7]], choices[Matrix[3][8]], choices[Matrix[3][9]]])
+                            choices[Matrix[3][5]], choices[Matrix[3][6]], choices[Matrix[3][7]], choices[Matrix[3][8]], choices[Matrix[3][9]], choices[Matrix[3][10]], choices[Matrix[3][11]]])
         row4 = cv2.hconcat([choices[Matrix[4][1]], choices[Matrix[4][2]], choices[Matrix[4][3]], choices[Matrix[4][4]],
-                            choices[Matrix[4][5]], choices[Matrix[4][6]], choices[Matrix[4][7]], choices[Matrix[4][8]], choices[Matrix[4][9]]])
+                            choices[Matrix[4][5]], choices[Matrix[4][6]], choices[Matrix[4][7]], choices[Matrix[4][8]], choices[Matrix[4][9]], choices[Matrix[4][10]], choices[Matrix[4][11]]])
         row5 = cv2.hconcat([choices[Matrix[5][1]], choices[Matrix[5][2]], choices[Matrix[5][3]], choices[Matrix[5][4]],
-                            choices[Matrix[5][5]], choices[Matrix[5][6]], choices[Matrix[5][7]], choices[Matrix[5][8]], choices[Matrix[5][9]]])
+                            choices[Matrix[5][5]], choices[Matrix[5][6]], choices[Matrix[5][7]], choices[Matrix[5][8]], choices[Matrix[5][9]], choices[Matrix[5][10]], choices[Matrix[5][11]]])
 
         all = cv2.vconcat([row0, row1, row2, row3, row4, row5])
 
